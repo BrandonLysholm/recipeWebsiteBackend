@@ -1,0 +1,18 @@
+meta {
+  name: Create Fail Category Does Not Exist
+  type: http
+  seq: 3
+}
+
+post {
+  url: http:/localhost:8080/ingredient
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "chocolate",
+    "categoryID": "7"
+  }
+}

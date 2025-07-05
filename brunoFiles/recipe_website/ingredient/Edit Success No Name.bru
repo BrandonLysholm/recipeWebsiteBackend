@@ -1,0 +1,18 @@
+meta {
+  name: Edit Success No Name
+  type: http
+  seq: 6
+}
+
+put {
+  url: http:/localhost:8080/ingredient
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 2,
+    "categoryID": 4
+  }
+}

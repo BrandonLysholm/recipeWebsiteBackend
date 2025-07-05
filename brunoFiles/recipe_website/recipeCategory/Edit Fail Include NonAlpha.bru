@@ -1,0 +1,18 @@
+meta {
+  name: Edit Fail Include NonAlpha
+  type: http
+  seq: 4
+}
+
+put {
+  url: http:/localhost:8080/recipeCategory
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 2,
+    "name": "lunch-munch"  
+  }
+}

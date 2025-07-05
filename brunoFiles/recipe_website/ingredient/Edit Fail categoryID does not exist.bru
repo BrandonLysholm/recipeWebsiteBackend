@@ -1,0 +1,18 @@
+meta {
+  name: Edit Fail categoryID does not exist
+  type: http
+  seq: 9
+}
+
+put {
+  url: http:/localhost:8080/ingredient
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 2,
+    "categoryID": 10
+  }
+}
