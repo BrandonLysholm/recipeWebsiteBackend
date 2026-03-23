@@ -1,0 +1,21 @@
+meta {
+  name: getAllSuccess
+  type: http
+  seq: 1
+}
+
+get {
+  url: http:/localhost:8080/ingredientCategory
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.status: eq 200
+  res.body[0].id: eq 1
+  res.body[0].name: eq protein
+  res.body[5].id: eq 6
+  res.body[5].name: eq misc
+  res.body[6]: isUndefined
+  res.body: length 6
+}

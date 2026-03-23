@@ -1,0 +1,27 @@
+meta {
+  name: createSuccess
+  type: http
+  seq: 2
+}
+
+post {
+  url: http:/localhost:8080/ingredientCategory
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "veggies"
+  }
+}
+
+assert {
+  res.status: eq 200
+  res.body.id: eq 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
