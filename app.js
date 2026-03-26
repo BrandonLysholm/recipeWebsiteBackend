@@ -31,3 +31,5 @@ app.use('/recipe', recipeRouter);
 
 addAssociations();
 createAllTables(false);
+
+module.exports = app;

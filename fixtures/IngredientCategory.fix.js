@@ -1,17 +1,10 @@
 const IngredientCategory = require('../private/javascript/IngredientCategory');
+const IngredientCategories = require('./ingredientCategory.json');
 
 async function fillIngredientCategoryTable() {
-    const IngredientCategories = [
-        'protein',
-        'vegetable',
-        'dairy',
-        'spice',
-        'carb',
-        'misc'
-    ];
     for (const ingredientCategory of IngredientCategories) {
         await IngredientCategory.create({
-            name: ingredientCategory
+            'name': ingredientCategory.name
         });
     }
 }

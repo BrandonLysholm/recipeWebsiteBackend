@@ -3,6 +3,18 @@
     "name": "protein"
   },
   {
-
+    "name": "vegetable"
+  },
+  {
+    "name": "dairy"
+  },
+  {
+    "name": "spice"
+  },
+  {
+    "name": "carb"
+  },
+  {
+    "name": "misc"
   }
 ]

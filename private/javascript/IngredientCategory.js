@@ -7,8 +7,12 @@ const IngredientCategory = sequelize.define('IngredientCategory', {
             unique: true,
             allowNull: false,
             validate: {
-                isAlpha: true,
-                notEmpty: true,
+                notEmpty: {
+                    msg: "name can not be empty"
+                },
+                isAlpha: {
+                    msg: "name can only consist of lowercase letters"
+                },
                 isLowercase: true,
             }
         }
