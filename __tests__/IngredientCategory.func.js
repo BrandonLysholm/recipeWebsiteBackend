@@ -12,7 +12,7 @@ const url = "/ingredientCategory";
 describe('create', () => {
 
     beforeEach(async() => {
-        await exec('node fixtures/loadAll.fix.js')
+        await exec('node fixtures/IngredientCategory.fix.js')
     })
 
     test("create valid ingredient", async()=>{
@@ -115,7 +115,7 @@ describe('create', () => {
 
 describe('read', () => {
     beforeAll(async() => {
-        await exec('node fixtures/loadAll.fix.js')
+        await exec('node fixtures/IngredientCategory.fix.js')
     })
 
     test("Test get all entries", async()=>{
@@ -163,7 +163,7 @@ describe('update', () => {
     let validCurrentEntry;
 
     beforeEach(async() => {
-        await exec('node fixtures/loadAll.fix.js')
+        await exec('node fixtures/IngredientCategory.fix.js')
 
         validCurrentEntry =
             {
@@ -251,7 +251,7 @@ describe('update', () => {
 describe('delete', () => {
 
     beforeEach(async() => {
-        await exec('node fixtures/loadAll.fix.js')
+        await exec('node fixtures/IngredientCategory.fix.js')
     })
 
     test("success delete last", async()=>{

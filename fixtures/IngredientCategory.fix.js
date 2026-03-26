@@ -9,4 +9,11 @@ async function fillIngredientCategoryTable() {
     }
 }
 
+async function resetTable() {
+    await IngredientCategory.sync({force: true})
+    await fillIngredientCategoryTable();
+}
+
+resetTable();
+
 module.exports = fillIngredientCategoryTable;
